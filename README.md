@@ -21,9 +21,15 @@ Docker engine have 2 componenet DockerD and DockerCLI.
 DockerD is the DockerDeamon which is something which runs in background process.
 DockerD contain containerD which is use for creating container and run the container. Dontainer is the product of Container Native computing Foundataion(CNCF) which is beign used by Docker.
 
+Docker CLI?
+it stand for Docker Command line interface.
+
 Install Docker in Linux
 
 sudo apt install docker
 sop apt install docker.io (this is docker engine)
 
+
+Docker Command
+docker ps (lists available container)
 
