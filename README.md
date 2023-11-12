@@ -1,4 +1,6 @@
 # Devops
+File->Image->Container
+We get Image from dockerhub or image repository to create an container.
 
 1. Why Docker is light weight? Difference between docker and vm box?
 Docker is light weight becasue it share the resources with the host OS.
@@ -34,4 +36,5 @@ sop apt install docker.io (this is docker engine)
 Docker Command
 
 docker ps (lists available container)
+
 
