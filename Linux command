@@ -1,0 +1,7 @@
+Adduser in a group
+
+sudo usermod -aG sourcegroup targetusertoaddingroup
+
+uninstall program
+sudo remove docker
+sudo purge doclker  (removes even temp file and cache)
