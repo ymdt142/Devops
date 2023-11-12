@@ -2,6 +2,10 @@
 File->Image->Container
 We get Image from dockerhub or image repository to create an container.
 
+What is Image??
+
+In Docker, an image is a lightweight, standalone, and executable package that includes everything needed to run a piece of software, including the code, runtime, libraries, and system tools. It serves as the blueprint for creating containers, which are running instances of the image. Docker images are built from a set of instructions contained in a file called a Dockerfile.
+
 1. Why Docker is light weight? Difference between docker and vm box?
 Docker is light weight becasue it share the resources with the host OS.
 
