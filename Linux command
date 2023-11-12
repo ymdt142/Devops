@@ -3,5 +3,8 @@ Adduser in a group
 sudo usermod -aG sourcegroup targetusertoaddingroup
 
 uninstall program
-sudo remove docker
-sudo purge doclker  (removes even temp file and cache)
+sudo apt remove docker
+sudo apt purge doclker  (removes even temp file and cache)
+
+Restart servicec 
+sudo systemctl restart servicename
