@@ -40,10 +40,18 @@ sop apt install docker.io (this is docker engine)
 Docker Command
 
 docker ps (lists available container)
+
 docker pull mysql (pulls mysql image from docker hub)
+
 docker images(lists available images)
+
 docker run imagename:imagetag
+
 docker run -e MYSQL_ROOT_PASSWORD=test@123 mysql:latest (running mysql with password passes as a enviroment argumnet)
+
 docker run -d -e MYSQL_ROOT_PASSWORD=test@123 mysql:latest (running mysql with password passes as a enviroment argumnet. Runs in background as deamon process)
+
 docker kill containerID(to stop the docker container instance)
+
+docker build -t java-app:latest .
 
