@@ -1,6 +1,6 @@
 # Devops
 
-Why Docker is light weight? Difference between docker and vm box?
+1. Why Docker is light weight? Difference between docker and vm box?
 Docker is light weight becasue it share the resources with the host OS.
 
 In virtual box, hyperviser is the layer which is in top of os. And in top of hyperwiser we have our application installed eg linux, windows etc
