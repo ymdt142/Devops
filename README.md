@@ -11,4 +11,9 @@ these docker container doesn't have kernal it make use of host os kernal to acce
 
 Each vietual box may have size of 4gb ,8gb but dock container will have less lize as compareb to vm machine.
 
+Docker Engine component?
+Docker engine have 2 componenet DockerD and DockerCLI.
+DockerD is the DockerDeamon which is something which runs in background process.
+DockerD contain containerD which is use for creating container and run the container. Dontainer is the product of Container Native computing Foundataion(CNCF) which is beign used by Docker.
+
 
