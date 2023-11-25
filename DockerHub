@@ -8,3 +8,16 @@ then push the new Image
       docker push userName/ImageName:TagName         (pushes the image to docker hub)
 to remove the docker images from system
       docker rmi imageID
+RUNNING DOCKER IMAGES
+      docker run imagename:imagetag
+RUNING WEBAPP DOCKER IMAGES
+      docker run -d -p HostPortNumber:ContainerPortNumber image:tagname   (-d is demon mode to run in background)
+                                                                          ( -p is to port number)
+                                                                          (HostPortNumber is the portnumber of the local computer
+                                                                           containerPortNumber is the port number of the container
+since application is running in the container 8000 port we need to map it with local pport by using ':')
+      eg
+      docker run -d -p 8000:8000 java-app:latest
+
+
+            
