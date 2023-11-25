@@ -1,0 +1,5 @@
+Les say developer has created and Employee web application to store the information of the employee.
+So when the image is running in the container.We will have the data since Image is running but as soon as image is killed, we will lose the data as we haven't stored the data in
+the database and data was temporarly was present in the container, as the image was killed data is lost from the container.
+
+So we need to store the data in a data base for which we have to bind container and the databse. These database is "volume" where the data will be stored.
