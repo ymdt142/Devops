@@ -1,2 +1,10 @@
 DockerHub command
-docker login  (login to dokerhub after this giver username and password)
+      docker login  (login to dokerhub after this giver username and password)
+
+PUSH IMAGE TO DOCKERHUB
+To pushc images into dockerHub we need to have image name format ass username/imagename:tagName so to rekame a exitsting image as in this formate use
+      docker tag ImageName:TagName UserName/ImageName:TagName      (this will create new image with name formate as userName/IamgeName:TagName which we can push in dockerHub)
+then push the new Image
+      docker push userName/ImageName:TagName         (pushes the image to docker hub)
+to remove the docker images from system
+      docker rmi imageID
