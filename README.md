@@ -56,6 +56,10 @@ docker kill containerID(to stop the docker container instance)
 docker run -d -p mycompterport:dockerPort myImageName:MyTag (this command is used to publish the we app application. we need to map current computrt port an the dockrt port on which the app is running. If we don't publish then application will run only inside container and enduser will not be able to use it so we need to publish it using -p paramter)
 
 TO MAKE IMAGE FROM DOCKERFILE synta (docker build -t ImageNameThatWeWantToCreateWith:TageName DockerFilePath)
+
+
 (. means docker file is present in same folder)
+
+
 docker build -t java-app:latest .
 
