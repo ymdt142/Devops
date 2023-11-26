@@ -3,3 +3,17 @@ So when the image is running in the container.We will have the data since Image 
 the database and data was temporarly was present in the container, as the image was killed data is lost from the container.
 
 So we need to store the data in a data base for which we have to bind container and the databse. These database is "volume" where the data will be stored.
+
+To create a volume
+  1. mkdir volumeFolder
+  2. cd volumeFolder
+  3. docker volume create --name volumeName --opt type=none --opt device=pwdOfTheVolumeFOlder --opt -o=bind
+
+            device is the path of the local volume folder(pwd). it also local storage point which we need to connect with volume and
+            we also need to conntct container strage point with the volume
+ 4. docker run -d -p 8000:8000 --mount source=VoulemeName,target=/app
+
+source is the volume name which we create and target is the working directory of the container. Target is the path from where we want 
+to take the data
+
+
