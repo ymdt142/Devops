@@ -1,1 +1,16 @@
-D
+Let say we are running an web app application container and we want to store the data in the database.
+For this we need to run mysql container to store the data and the webapp application container.
+
+Next task is to connect them. Since each container is an isolated container, we need create a network between these container to 
+connect them.
+
+Ok lets forst create and mySQL container and run it.
+
+    1.  docker run -d -p 3306:3306 -e MY_SQL_ROOT_PASSWORD=test@123 -e MYSQL_DATABSE=testdb -e MYSQL_USER=admin
+        -e MYSQL_PASSWORD=admin --name mysql mysql:latest
+
+this will pull mysql:latest and run it. Mysql runs in port 3306 so we gave it 3306, we can find more info in internet.
+Now databse is running we need to run webappcontainer and pass the databse information. ALso we are giving the name to 
+this container because in docker we want to send request between two container we can send it through container name.
+
+
