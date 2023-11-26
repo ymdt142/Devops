@@ -11,7 +11,7 @@ To create a volume
 
             device is the path of the local volume folder(pwd). it also local storage point which we need to connect with volume and
             we also need to conntct container strage point with the volume
- 4. docker run -d -p 8000:8000 --mount source=VoulemeName,target=/app
+ 4. docker run -d -p 8000:8000 --mount source=VoulemeName,target=/app Imagename:TagName
 
 source is the volume name which we create and target is the working directory of the container. Target is the path from where we want 
 to take the data
