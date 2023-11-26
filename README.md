@@ -41,6 +41,10 @@ Docker Command
 
 docker ps (lists available container)
 
+docker ps -a (lists all available container also dead container)
+
+docker system prune (removes all container)
+
 docker pull mysql (pulls mysql image from docker hub)
 
 docker images(lists available images)
