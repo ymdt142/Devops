@@ -15,10 +15,18 @@ this container because in docker we want to send request between two container w
 THis container name is now the hostName.
 
 Now lets run the webapp container
-    2.  docker run -d -p 5000:5000 -e MYSQL_HOST=mysql -e MYSQL_USER=admin -e MYSQL_PASSWORD=admin -e MYSQL_DB=testdb flask-app:latest
+    2.  docker run -d -p 5000:5000 -e MYSQL_HOST=mysql -e MYSQL_USER=admin -e MYSQL_PASSWORD=admin -e MYSQL_DB=testdb --name flask-app flask-app:latest
 
 
 we are passing these enviroment values as in the code it is fetching it to conntet it to databse.
-See the code from here
+See the code from here https://github.com/ymdt142/two-tier-flask-app/blob/master/app.py
+Now fask-app will try to connect to mysql container but however it will fail. Now next step is to create a Network
+
+Create Docker Network
+    3.   docker network create -d bridge networkName
+    4.   docker network -ls
+Now network is created. But we still need to configure it for flas-app container and mysql container.
+Here -d is the driver and not demone mode.
+
 
 
