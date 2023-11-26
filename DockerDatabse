@@ -14,6 +14,12 @@ Now databse is running we need to run webappcontainer and pass the databse infor
 this container because in docker we want to send request between two container we can send it through container name.
 THis container name is now the hostName.
 
+To get the inteactive termilan with sql type thiis comand
+        docker exec -it MYSQLcontainerID bash
+now bash will open give username and password and enjoy
+        mysql -u root -p(hit enter and in next line type password of the root user)
+this termilan is from the container
+
 Now lets run the webapp container
     2.  docker run -d -p 5000:5000 -e MYSQL_HOST=mysql -e MYSQL_USER=admin -e MYSQL_PASSWORD=admin -e MYSQL_DB=testdb --name flask-app flask-app:latest
 
@@ -27,6 +33,18 @@ Create Docker Network
     4.   docker network -ls
 Now network is created. But we still need to configure it for flas-app container and mysql container.
 Here -d is the driver and not demone mode.
+
+Now network is created kill and remove previous container which is running as we need to configure it.
+    5. docker kill containerID && docker rm containerID
+    6. docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=test@123 -e MYSQL_DATABASE=testdb -e MYSQL_USER=admin -e MYSQL_PASSWORD=admin
+        --name mysql --network NetworkName mysql:latest
+
+Now it is connted to the database we need to connect it to flaskapp too. 
+    7. docker inspect networkname( you will see only mysql container is present)
+lets add flask app too
+    8.  docker run -d -p 5000:5000 -e MYSQL_HOST=mysql -e MYSQL_USER=admin -e MYSQL_PASSWORD=admin -e MYSQL_DB=testdb 
+        --name flask-app --network NetworkName flask-app:latest
+
 
 
 
