@@ -45,6 +45,8 @@ lets add flask app too
     8.  docker run -d -p 5000:5000 -e MYSQL_HOST=mysql -e MYSQL_USER=admin -e MYSQL_PASSWORD=admin -e MYSQL_DB=testdb 
         --name flask-app --network NetworkName flask-app:latest
 
+goto bash intractitive mysql terminal and create table according to code.
+
 
 
 
