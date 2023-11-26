@@ -12,5 +12,13 @@ Ok lets forst create and mySQL container and run it.
 this will pull mysql:latest and run it. Mysql runs in port 3306 so we gave it 3306, we can find more info in internet.
 Now databse is running we need to run webappcontainer and pass the databse information. ALso we are giving the name to 
 this container because in docker we want to send request between two container we can send it through container name.
+THis container name is now the hostName.
+
+Now lets run the webapp container
+    2.  docker run -d -p 5000:5000 -e MYSQL_HOST=mysql -e MYSQL_USER=admin -e MYSQL_PASSWORD=admin -e MYSQL_DB=testdb flask-app:latest
+
+
+we are passing these enviroment values as in the code it is fetching it to conntet it to databse.
+See the code from here
 
 
